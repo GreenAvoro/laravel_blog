@@ -2,7 +2,8 @@
 @extends('layout')
 
 @section('content')
-    <h1>The blog</h1>
+    <h1>The Blog</h1>
+    <p>I've added this subtitle to test the auto-deploy functionality of Forge.</p>
     <hr>
     @foreach ($posts as $post)
         <p>
