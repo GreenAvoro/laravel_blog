@@ -21,8 +21,8 @@
     <div class="h-16"></div>
     <div class="flex">
         <nav class="fixed w-[22%] border-r border-teal-800 top-16 bottom-0 p-6 text-xl">
-            <p class="mb-2"><i class="fa-solid fa-newspaper mr-2"></i>News</p>
-            <p><i class="fa-solid fa-calendar mr-2"></i>Schedule</p>
+            <a href="/"><p class="mb-2"><i class="fa-solid fa-newspaper mr-2"></i>News</p></a>
+            <a href="/schedule"><p><i class="fa-solid fa-calendar mr-2"></i>Schedule</p></a>
         </nav>
         <div class="ml-[22%] w-full p-6">
             {{ $content }}
