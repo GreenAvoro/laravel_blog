@@ -1,12 +1,12 @@
 
 
-<div class="bg-gray-200 p-6 m-3">
-    <a href="/post/{{$post->slug}}">
+<div class="mb-14 rounded">
+    <a href="/post/{{$post->slug}}" class="text-5xl">
         <h2>{{$post->title}}</h2>
     </a>
-    <a href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a>
-    <p>{{$post->excerpt}}</p>
-    <p style="font-size: .9rem; color: #222">
-        Written by: <a href="user/{{$post->author->id}}">{{$post->author->name}}</a>
+    <a href="/categories/{{$post->category->slug}}"><span class="text-teal-300 mr-1">#</span>{{$post->category->name}}</a>
+    <p class="text-sm text-teal-300 mb-2">
+        Written by: <a href="user/{{$post->author->id}}">{{$post->author->name}}</a> - {{date('Y / m / d', strtotime($post->created_at))}}
     </p>
+    <p>{{$post->body}}</p>
 </div>

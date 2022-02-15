@@ -5,13 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ea81400e39.js" crossorigin="anonymous"></script>
     <title>Laravel Blog Practice</title>
 </head>
-<body>
-    <header class="p-6">
-        <h1 class="underline text-3xl">This is the header for the blog</h1>
+<body class="bg-teal-900 text-white">
+    <header class="p-2 pl-4 fixed h-16 top-0 left-0 right-0 bg-teal-900/50 backdrop-blur border-b border-teal-800 flex items-center justify-between">
+        <div class="flex items-center">
+            <img src="{{asset('assets/logo.png')}}" alt="Crewboard" class="h-9"><i>2.0</i>
+        </div>
+        <div class="mr-2">
+            <i class="fa-solid fa-gear mr-2 text-teal-500"></i>
+            <a href="/" class="bg-teal-500 text-teal-900 py-1 px-6 rounded">Login</a>
+        </div>
     </header>
-    {{ $content }}
+    <div class="h-16"></div>
+    <div class="flex">
+        <nav class="fixed w-[22%] border-r border-teal-800 top-16 bottom-0 p-6 text-xl">
+            <p class="mb-2"><i class="fa-solid fa-newspaper mr-2"></i>News</p>
+            <p><i class="fa-solid fa-calendar mr-2"></i>Schedule</p>
+        </nav>
+        <div class="ml-[22%] w-full p-6">
+            {{ $content }}
+        </div>
+    </div>
     <footer>
         <p>This is the footer</p>
     </footer>
