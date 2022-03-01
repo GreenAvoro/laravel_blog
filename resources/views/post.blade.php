@@ -7,6 +7,9 @@
         <p class="text-teal-300">{{date('Y / m / d',strtotime($post->created_at))}}</p>
         <p class="text-teal-300">{{ $post->author->name}}</p>
         <br>
-        <p>{{ $post->body }}</p>
+        <div class="w-[80%] m-auto mt-10">
+            <img src="{{asset('assets/img1.jpg')}}" alt="rowing" class="rounded mb-4">
+            <p>{{ $post->body }}</p>
+        </div>
     </x-slot>
-</x-layout>
+</x-layout>                          
