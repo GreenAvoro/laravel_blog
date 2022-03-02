@@ -9,8 +9,14 @@ use Illuminate\Support\Facades\DB;
 
 
 Route::get('/', function () {
+    $posts = Post::latest()->with('author');
+    if(request('search')){
+        $posts
+            ->where('title', 'like', '%'.request('search').'%')
+            ->orWhereHas('Author', fn($q) => $q->where('name', 'like', "%".request('search')."%"));
+    }
     return view('posts', [
-        'posts' => Post::latest('published_at')->with('category')->get(),
+        'posts' => $posts->get(),
         'type' => 'posts'
     ]);
 });
